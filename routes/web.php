@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoCreatorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,25 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get("/", [RoCreatorController::class, "home"])->name("home");
 
-Route::get('/games-roblox', function () {
-    return view('games-roblox');
-});
+Route::get("/games-roblox", [RoCreatorController::class, "gamesRoblox"])->name("gamesRoblox");
 
-Route::get('/games-android', function () {
-    return view('games-android');
-});
+Route::get("/games-android", [RoCreatorController::class, "gamesAndroid"])->name("gamesAndroid");
 
-Route::get('/software', function () {
-    return view('software');
-});
+Route::get("/software", [RoCreatorController::class, "software"])->name("software");
 
-Route::get('/privacy', function () {
-    return view('privacy');
-});
+Route::get("/privacy", [RoCreatorController::class, "privacy"])->name("privacy");
 
 Route::get('/contacts', function () {
     return view('contacts');
@@ -39,4 +30,4 @@ Route::get('/contacts', function () {
 
 Route::get('/mail-status', function () {
     return view('mail-status');
-});
+})->name('mailStatus');

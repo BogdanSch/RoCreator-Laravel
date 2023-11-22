@@ -13,8 +13,9 @@
                     Feel free to use the contact form to reachout to us.
                 </p>
             </div>
-            <form action="./mail-action" method="post" class="contacts__form" data-aos="fade-up"
+            <form action="{{ route('mailStatus') }}" method="post" accept-charset="UTF-8" class="contacts__form" data-aos="fade-up"
                 data-aos-duration="2000">
+                {{scrf_field()}}
                 <h3 class="contacts__form-title">Send me <span class="contacts__form-title-span">a message🚀</span></h3>
                 <div class="form-group">
                     <div class="form-group">
