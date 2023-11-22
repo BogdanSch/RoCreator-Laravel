@@ -104,17 +104,17 @@
     <div class="container">
         <div class="software__wrap">
             <ul class="software__list" id="pc-soft">
-                @foreach ($gamePosts as $gamePost)
+                @foreach ($softwarePosts as $softwarePost)
                     <li class="games__item card" data-aos="fade-up" data-aos-duration="2000">
-                        <img src="{{asset('img/' . $gamePost->game_image)}}" class="games__img" alt="game image">
+                        <img src="{{asset('img/' . $softwarePost->game_image)}}" class="games__img" alt="game image">
                         <div class="description">
                             <div class="text">
-                                <h5>{{$gamePost->game_title}}</h5>
-                                <p>{{$gamePost->game_content}}</p>
+                                <h5>{{$softwarePost->game_title}}</h5>
+                                <p>{{$softwarePost->game_content}}</p>
                             </div>
-                            <div class="type"><span>Platform: </span> {{$gamePost->game_type}}</div>
-                            @if ($gamePost->game_available === 1)
-                                <a href="{{$gamePost->game_link}}" target="_blank" class="btn btn--play">Play</a>
+                            <div class="type"><span>Platform: </span> {{$softwarePost->game_type}}</div>
+                            @if ($softwarePost->game_available === 1)
+                                <a href="{{$softwarePost->game_link}}" target="_blank" class="btn btn--play">Play</a>
                             @else
                                 <a class="btn btn--play unfinished">Play</a>
                             @endif
