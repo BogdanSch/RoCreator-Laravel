@@ -115,9 +115,9 @@
                             </div>
                             <div class="type"><span>Platform: </span> {{ $softwarePost->software_type }}</div>
                             @if ($softwarePost->software_available === 1)
-                                <a href="{{ $softwarePost->software_link }}" target="_blank" class="btn btn--play">Play</a>
+                                <a href="{{ $softwarePost->software_link }}" target="_blank" class="btn btn--play">Get</a>
                             @else
-                                <a class="btn btn--play unfinished">Play</a>
+                                <a class="btn btn--play unfinished">Get</a>
                             @endif
                         </div>
                         <img class="bg--img" src="{{ asset('img/background.png') }}" alt="background">
