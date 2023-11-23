@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use App\Models\GamePost;
 use App\Models\SoftwarePost;
 
@@ -10,7 +11,12 @@ class RoCreatorController extends Controller
 {
     public function home(Request $request)
     {
-        return view("home", ['gamePosts' => GamePost::all(), 'softwarePosts' => SoftwarePost::all()]);
+        $allSoftwarePosts = SoftwarePost::take(4)->get();
+        $allGamePosts = GamePost::take(4)->get();
+        
+        // Log::info(json_encode($allSoftwarePosts)); 
+        // Log::info(json_encode($allGamePosts)); 
+        return view("home", ['gamePosts' => $allGamePosts, 'softwarePosts' => $allSoftwarePosts]);
     }
     public function gamesRoblox(Request $request)
     {
