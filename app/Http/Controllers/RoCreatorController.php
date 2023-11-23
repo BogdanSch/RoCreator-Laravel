@@ -14,11 +14,11 @@ class RoCreatorController extends Controller
     }
     public function gamesRoblox(Request $request)
     {
-        return view("gamesRoblox", ['androidGamePosts' => GamePost::all()]);
+        return view("games-roblox", ['androidGamePosts' => GamePost::all()]);
     }
     public function gamesAndroid(Request $request)
     {
-        return view("gamesAndroid", ['androidGamePosts' => GamePost::all()]);
+        return view("games-android", ['androidGamePosts' => GamePost::all()]);
     }
     public function software(Request $request)
     {

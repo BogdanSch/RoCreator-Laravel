@@ -89,7 +89,7 @@
             <div class="introduction">
                 <img src="{{ asset('img/software-intro.jpg') }}" class="col-img" alt="Software Intro Image">
                 <div class="content">
-                    <h2>My software for pc and android</h2>
+                    <h2>My software for PC, Web and Android</h2>
                     <p>This is a short list of all my software for Android and Windows platforms which you may find
                         useful to you, feel free to use it all! Just click 'More' to
                         start your new productive day.

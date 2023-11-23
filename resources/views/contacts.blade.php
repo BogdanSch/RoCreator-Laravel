@@ -15,7 +15,7 @@
             </div>
             <form action="{{ route('mailStatus') }}" method="post" accept-charset="UTF-8" class="contacts__form" data-aos="fade-up"
                 data-aos-duration="2000">
-                {{scrf_field()}}
+                @csrf
                 <h3 class="contacts__form-title">Send me <span class="contacts__form-title-span">a message🚀</span></h3>
                 <div class="form-group">
                     <div class="form-group">
