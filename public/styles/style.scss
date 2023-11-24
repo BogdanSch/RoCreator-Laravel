@@ -38,7 +38,7 @@ $green: #1aff00;
 @import "templates/footer.scss";
 
 //Media queries
-@media screen and (max-width: 529px) {
+@media screen and (max-width: 629px) {
   .header {
     height: 40px;
 
@@ -170,7 +170,7 @@ $green: #1aff00;
     }
   }
 }
-@media screen and (min-width: 530px) and (max-width: 770px) {
+@media screen and (min-width: 630px) and (max-width: 770px) {
   p {
     font-size: 12px;
   }

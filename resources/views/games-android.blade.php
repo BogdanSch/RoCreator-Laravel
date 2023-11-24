@@ -51,7 +51,6 @@
                                 <a class="btn btn--play unfinished">Play</a>
                             @endif
                         </div>
-                        <img class="bg--img" src="{{ asset('img/background.png') }}" alt="Card background">
                     </li>
                 @endforeach
             </ul>

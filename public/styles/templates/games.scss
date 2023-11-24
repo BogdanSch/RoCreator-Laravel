@@ -17,16 +17,31 @@
         @include flex-row();
         flex-wrap: wrap;
         list-style: none;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
     &__item {
         display: flex;
         align-items: center;
+        justify-content: center;
         width: 48%;
-        height: 300px;
+        height: 340px;
         position: relative;
         margin: 60px auto;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 10%;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url("../img/background.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
         .description {
             width: 49%;
@@ -46,26 +61,26 @@
 
 @media screen and (max-width: 629px) {
     .games {
-        &__list {
-            @include flex-column();
-            justify-content: center;
-            // align-items: center;
-        }
-        &__item {
-            width: 60%;
-            margin: 80px 0;
-            .description {
-                min-width: 64%;
-            }
-            &-image {
-                width: 50%;
-                left: -10%;
-            }
-        }
         &__introduction {
             img {
                 width: 38%;
                 align-self: center;
+            }
+        }
+        &__list {
+            @include flex-column();
+            justify-content: center;
+        }
+        &__item {
+            width: 84%;
+            margin-top: 10px;
+
+            .description {
+                min-width: 54%;
+            }
+            &-image {
+                width: 50%;
+                left: -10%;
             }
         }
     }
@@ -77,9 +92,11 @@
             justify-content: center;
         }
         &__item {
-            margin: 120px 0;
+            width: 60%;
+            margin-top: 10px;
+
             .description {
-                min-width: 60%;
+                width: 60%;
             }
             &-image {
                 width: 55%;
