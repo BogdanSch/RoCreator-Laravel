@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoCreatorController;
 
@@ -24,10 +25,6 @@ Route::get("/software", [RoCreatorController::class, "software"])->name("softwar
 
 Route::get("/privacy", [RoCreatorController::class, "privacy"])->name("privacy");
 
-Route::get('/contacts', function () {
-    return view('contacts');
-});
+Route::get('/contacts', [ContactsController::class, "index"])->name("contacts");
 
-Route::get('/mail-status', function () {
-    return view('mail-status');
-})->name('mailStatus');
+Route::get('/mail-status', [ContactsController::class, "mailStatus"])->name('mailStatus');

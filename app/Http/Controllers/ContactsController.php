@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ContactsController extends Controller
 {
@@ -10,7 +11,7 @@ class ContactsController extends Controller
         return view("contacts");
     }
     public function mailStatus(Request $request){
-        // $email = $request->input("email");
+        Log::info($request);
         return view("mail-status");
     }
 }
