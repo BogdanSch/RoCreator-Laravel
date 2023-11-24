@@ -11,24 +11,27 @@ class RoCreatorController extends Controller
 {
     public function index()
     {
-        $allSoftwarePosts = SoftwarePost::take(4)->get();
-        $allGamePosts = GamePost::take(4)->get();
+        $softwarePosts = SoftwarePost::take(4)->get();
+        $gamePosts = GamePost::take(4)->get();
 
         // Log::info(json_encode($allSoftwarePosts)); 
         // Log::info(json_encode($allGamePosts)); 
-        return view("home", ['gamePosts' => $allGamePosts, 'softwarePosts' => $allSoftwarePosts]);
+        return view("home", ['gamePosts' => $gamePosts, 'softwarePosts' => $softwarePosts]);
     }
     public function gamesRoblox()
     {
-        return view("games-roblox", ['robloxGamePosts' => GamePost::all()]);
+        $allRobloxGames = GamePost::where('game_type', 'Roblox')->get();
+        return view("games-roblox", ['robloxGamePosts' => $allRobloxGames]);
     }
     public function gamesAndroid()
     {
-        return view("games-android", ['androidGamePosts' => GamePost::all()]);
+        $allAndroidGames = GamePost::where('game_type', 'Android')->get();
+        return view("games-android", ['androidGamePosts' => $allAndroidGames]);
     }
     public function software()
     {
-        return view("software", ['softwarePosts' => SoftwarePost::all()]);
+        $allSoftwarePosts = SoftwarePost::all();
+        return view("software", ['softwarePosts' => $allSoftwarePosts]);
     }
     public function privacy()
     {

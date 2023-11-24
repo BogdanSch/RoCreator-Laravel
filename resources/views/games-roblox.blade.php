@@ -37,16 +37,24 @@
     <div class="container">
         <div class="games__wrap">
             <ul class="games__list" id="roblox-games">
-                <?php
-                // $posts = Post::out(6, 0, "game", "Roblox");
-                // if (count($posts) > 0) {
-                //     foreach ($posts as $post) {
-                //         echo $post->renderHTML();
-                //     }
-                // } else {
-                //     echo "Sorry, there're no games";
-                // }
-                ?>
+                @foreach ($robloxGamePosts as $gamePost)
+                    <li class="games__item card" data-aos="fade-up" data-aos-duration="2000">
+                        <img src="{{ asset('img/' . $gamePost->game_image) }}" class="games__item-image" alt="Games Image">
+                        <div class="description">
+                            <div class="text">
+                                <h5>{{ $gamePost->game_title }}</h5>
+                                <p>{{ $gamePost->game_content }}</p>
+                            </div>
+                            <div class="type"><span>Platform: </span> {{ $gamePost->game_type }}</div>
+                            @if ($gamePost->game_available === 1)
+                                <a href="{{ $gamePost->game_link }}" target="_blank" class="btn btn--play">Play</a>
+                            @else
+                                <a class="btn btn--play unfinished">Play</a>
+                            @endif
+                        </div>
+                        <img class="bg--img" src="{{ asset('img/background.png') }}" alt="Card background">
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>

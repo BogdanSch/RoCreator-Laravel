@@ -40,16 +40,24 @@
     <div class="container">
         <div class="software__wrap">
             <ul class="software__list" id="pc-software">
-                <?php
-                // $posts = Post::out(6, 0, "software", "all");
-                // if (count($posts) > 0) {
-                //     foreach ($posts as $post) {
-                //         echo $post->renderHTML("software");
-                //     }
-                // } else {
-                //     echo "Sorry, there're no software";
-                // }
-                ?>
+                @foreach ($softwarePosts as $softwarePost)
+                    <li class="games__item card" data-aos="fade-up" data-aos-duration="2000">
+                        <img src="{{ asset('img/' . $softwarePost->software_image) }}" class="games__item-image" alt="Software Image">
+                        <div class="description">
+                            <div class="text">
+                                <h5>{{ $softwarePost->software_title }}</h5>
+                                <p>{{ $softwarePost->software_content }}</p>
+                            </div>
+                            <div class="type"><span>Platform: </span> {{ $softwarePost->software_type }}</div>
+                            @if ($softwarePost->software_available === 1)
+                                <a href="{{ $softwarePost->software_link }}" target="_blank" class="btn btn--play">Get</a>
+                            @else
+                                <a class="btn btn--play unfinished">Get</a>
+                            @endif
+                        </div>
+                        <img class="bg--img" src="{{ asset('img/background.png') }}" alt="Card background">
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>

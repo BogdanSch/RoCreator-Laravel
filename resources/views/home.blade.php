@@ -61,7 +61,7 @@
             <ul class="games__list" id="roblox-games">
                 @foreach ($gamePosts as $gamePost)
                     <li class="games__item card" data-aos="fade-up" data-aos-duration="2000">
-                        <img src="{{ asset('img/' . $gamePost->game_image) }}" class="games__img" alt="game image">
+                        <img src="{{ asset('img/' . $gamePost->game_image) }}" class="games__item-image" alt="Games Image">
                         <div class="description">
                             <div class="text">
                                 <h5>{{ $gamePost->game_title }}</h5>
@@ -74,7 +74,7 @@
                                 <a class="btn btn--play unfinished">Play</a>
                             @endif
                         </div>
-                        <img class="bg--img" src="{{ asset('img/background.png') }}" alt="background">
+                        <img class="bg--img" src="{{ asset('img/background.png') }}" alt="Card background">
                     </li>
                 @endforeach
             </ul>
@@ -107,7 +107,7 @@
             <ul class="software__list" id="pc-soft">
                 @foreach ($softwarePosts as $softwarePost)
                     <li class="games__item card" data-aos="fade-up" data-aos-duration="2000">
-                        <img src="{{ asset('img/' . $softwarePost->software_image) }}" class="games__img" alt="game image">
+                        <img src="{{ asset('img/' . $softwarePost->software_image) }}" class="games__item-image" alt="Software Image">
                         <div class="description">
                             <div class="text">
                                 <h5>{{ $softwarePost->software_title }}</h5>
@@ -120,7 +120,7 @@
                                 <a class="btn btn--play unfinished">Get</a>
                             @endif
                         </div>
-                        <img class="bg--img" src="{{ asset('img/background.png') }}" alt="background">
+                        <img class="bg--img" src="{{ asset('img/background.png') }}" alt="Card background">
                     </li>
                 @endforeach
             </ul>
