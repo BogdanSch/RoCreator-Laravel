@@ -27,4 +27,5 @@ Route::get("/privacy", [RoCreatorController::class, "privacy"])->name("privacy")
 
 Route::get('/contacts', [ContactsController::class, "index"])->name("contacts");
 
-Route::get('/mail-status', [ContactsController::class, "mailStatus"])->name('mailStatus');
+Route::post('/send-mail', [ContactsController::class, "sendMail"])->name('sendMail');
+Route::get('/mail-status', [ContactsController::class, "mailStatusResponse"])->name("mailStatus");

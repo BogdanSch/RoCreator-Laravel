@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts/layout')
 
 @section('main_content')
 <section class="introducing bg-color" data-aos="fade-up" data-aos-duration="2000">

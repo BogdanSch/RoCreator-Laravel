@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts/layout')
 
 @section('main_content')
 <section class="contacts">
@@ -13,20 +13,20 @@
                     Feel free to use the contact form to reachout to us.
                 </p>
             </div>
-            <form action="{{ route('mailStatus') }}" method="post" accept-charset="UTF-8" class="contacts__form" data-aos="fade-up"
+            <form action="{{ route('sendMail') }}" method="post" accept-charset="UTF-8" class="contacts__form" data-aos="fade-up"
                 data-aos-duration="2000">
                 @csrf
                 <h3 class="contacts__form-title">Send me <span class="contacts__form-title-span">a message🚀</span></h3>
                 <div class="form-group">
                     <div class="form-group">
-                        <input type="text" name="full-name" class="contacts__form-input" placeholder="Full name*"
+                        <input type="text" name="fullName" class="contacts__form-input" placeholder="Full name*"
                             autocomplete="given-name family-name" required />
                         <div class="form-group">
                             <input type="email" name="email" class="contacts__form-input" placeholder="Email address*"
                                 autocomplete="email" required />
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" class="contacts__form-input" placeholder="Subject" />
+                            <input type="text" name="subject" class="contacts__form-input" placeholder="Subject*" required />
                         </div>
                         <div class="form-group">
                             <label for="message">Tell me what you want to chat about*</label>

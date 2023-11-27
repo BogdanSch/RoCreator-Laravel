@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts/layout')
 
 @section('main_content')
 <section class="privacy" data-aos="zoom-in" data-aos-duration="2500">
