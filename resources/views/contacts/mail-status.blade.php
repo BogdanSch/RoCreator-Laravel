@@ -6,7 +6,7 @@
         <div class="mail_wrap">
             @if ($mailStatus === 'success')
                 <div class="popup success card" data-aos="zoom-out" data-aos-duration="1000">
-                    <img src="{{ asset('img/confirm-icon.png') }}" alt="Confirm Image">
+                    <img class="popup__image" src="{{ asset('img/confirm-icon.png') }}" alt="Confirm Image">
                     <div class="popup__title">
                         Your message was sent successfully!
                     </div>

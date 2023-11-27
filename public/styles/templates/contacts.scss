@@ -1,70 +1,78 @@
 .contacts {
-  &__wrap {
-    @include flex-row();
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__title {
-    font-size: 40px;
-    &-span {
-      display: block;
-      color: $accent;
+    &__wrap {
+        @include flex-row();
+        justify-content: space-between;
+        align-items: center;
     }
-  }
-  &__description {
-    color: $text-color;
-    font-size: 18px !important;
-  }
-  &__form {
-    min-width: 44%;
+    &__title {
+        font-size: 40px;
+        &-span {
+            display: block;
+            color: $accent;
+        }
+    }
+    &__description {
+        color: $text-color;
+        font-size: 18px !important;
+    }
+    &__form {
+        min-width: 44%;
 
-    &-title {
-      font-size: 28px;
-      &-span {
-        color: $yellow;
-      }
-    }
-    label {
-      font-weight: 600;
-    }
-    &-input,
-    &-text {
-      display: block;
-      padding: 10px 20px;
-      min-width: 100%;
-      border: none;
-      border-radius: 10px;
-      background-color: $light-blue;
-      color: $text-color;
+        &-title {
+            font-size: 28px;
+            &-span {
+                color: $yellow;
+            }
+        }
+        label {
+            font-weight: 600;
+        }
+        &-input,
+        &-text {
+            display: block;
+            padding: 10px 20px;
+            min-width: 100%;
+            border: none;
+            border-radius: 10px;
+            background-color: $light-blue;
+            color: $text-color;
 
-      &:focus {
-        outline: none;
-        outline: 4px solid $accent;
-      }
+            &:focus {
+                outline: none;
+                outline: 4px solid $accent;
+            }
+        }
     }
-  }
 }
 
 .form-group {
-  margin: 10px auto;
+    margin: 10px auto;
 
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.contacts-map {
+    margin: 80px 0;
+
+    &__iframe {
+        min-width: 100%;
+    }
 }
 
 @media screen and (max-width: 770px) {
-  .contacts {
-    &__wrap {
-      @include flex-column();
+    .contacts {
+        &__wrap {
+            @include flex-column();
+        }
+        &__form {
+            min-width: 100%;
+        }
+        .btn--submit {
+            display: block;
+            margin: 4px auto;
+        }
     }
-    &__form {
-      min-width: 100%;
-    }
-    .btn--submit {
-      display: block;
-      margin: 4px auto;
-    }
-  }
 }

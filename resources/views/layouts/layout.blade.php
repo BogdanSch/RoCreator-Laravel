@@ -100,6 +100,7 @@
     <script src="{{asset('js/game-links.js')}}"></script>
     <script src="{{asset('js/header-links.js')}}"></script>
     <script src="{{asset('js/burger-menu.js')}}"></script>
+    <script src="{{asset('js/form-handler.js')}}"></script>
     <script>
         AOS.init();
     </script>
