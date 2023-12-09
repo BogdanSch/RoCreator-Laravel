@@ -1,88 +1,174 @@
 .header {
-  background-color: $background-dark;
-  min-width: 100%;
-  height: 50px;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-
-  .page__theme:hover {
-    cursor: pointer;
-  }
-  .logo {
-    font-size: 20px;
-    font-weight: 600;
-  }
-  &__wrap {
-    @include flex-row();
-    justify-content: space-between;
-    align-items: center;
-    max-height: 30px;
-    * {
-      color: $white-text;
-      font-weight: 400;
-      font-size: 16px;
-      text-decoration: none;
-    }
-  }
-  &__menu {
-    @include flex-row();
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  &__list {
-    @include flex-row();
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
-  }
-  &__item {
-    &.accent {
-      background-color: $accent;
-      padding: 10px 20px;
-      border-radius: 10px;
-      transition: all .5s ease;
-    
-      &:hover {
-        background-color: $purple;
-      }
-    }
-    a {
-      &:hover {
-        color: $yellow;
-      }
-    }
-  }
-  &__lower__list {
-    position: absolute;
-    z-index: 100;
-    top: 60px;
-    left: -75%;
     background-color: $background-dark;
-    border-radius: 10px;
-    padding: 30px 40px;
-    display: none;
-  }
-  &__lower__item {
-    color: $white-text;
-    padding: 10px 10px;
-    &:hover {
-      border-bottom: 1px solid $white-text;
+    min-width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+
+    .page__theme:hover {
+        cursor: pointer;
     }
-  }
+    .logo {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &__wrap {
+        @include flex-row();
+        justify-content: space-between;
+        align-items: center;
+        max-height: 30px;
+        * {
+            color: $white-text;
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    }
+    &__menu {
+        @include flex-row();
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    &__list {
+        @include flex-row();
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+    }
+    &__item {
+        &.accent {
+            background-color: $accent;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: $purple;
+            }
+        }
+        a {
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+    &__lower__list {
+        position: absolute;
+        z-index: 100;
+        top: 60px;
+        left: -75%;
+        background-color: $background-dark;
+        border-radius: 10px;
+        padding: 30px 40px;
+        display: none;
+    }
+    &__lower__item {
+        color: $white-text;
+        padding: 10px 10px;
+        &:hover {
+            border-bottom: 1px solid $white-text;
+        }
+    }
 }
 .sub-games {
-  position: relative;
-  padding: 20px 0;
+    position: relative;
+    padding: 20px 0;
 
-  &:hover {
-    button {
-      cursor: pointer;
-      color: $yellow;
+    &:hover {
+        button {
+            cursor: pointer;
+            color: $yellow;
+        }
+        .header__lower__list {
+            display: block;
+        }
     }
-    .header__lower__list {
-      display: block;
+}
+
+@media screen and (max-width: 670px) {
+    .header {
+        height: 40px;
+
+        &__burger {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 3;
+            &::before {
+                content: "";
+                background-color: $white-text;
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                left: 0;
+                transition: all 0.5s ease;
+                top: 0;
+            }
+            &::after {
+                content: "";
+                background-color: $white-text;
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                left: 0;
+                transition: all 0.5s ease;
+                bottom: 0;
+            }
+            span {
+                position: absolute;
+                background-color: $white-text;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.5s ease;
+            }
+            &.active {
+                span {
+                    display: none;
+                    transition: all 0.5s ease;
+                }
+                &::before {
+                    transform: rotate(45deg) scale(1);
+                    top: 9px;
+                    transition: all 0.5s ease;
+                }
+                &::after {
+                    transform: rotate(-45deg) scale(1);
+                    bottom: 9px;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+        &__list {
+            display: block;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: $background-light;
+            transition: all 0.5s ease 1;
+            margin-top: 0;
+
+            &.active {
+                top: 40px;
+            }
+        }
+        &__item {
+            padding: 10px 10px;
+        }
+        &__lower__list {
+            z-index: 30;
+            top: 30px;
+            left: 20%;
+            background-color: $background-dark;
+            border-radius: 10px;
+            padding: 30px 40px;
+            display: none;
+        }
     }
-  }
 }

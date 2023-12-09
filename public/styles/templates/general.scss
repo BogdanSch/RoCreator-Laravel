@@ -1,239 +1,240 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;700&display=swap";
 * {
-  box-sizing: border-box;
-  transition: all 0.2s ease;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
 }
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body {
-  font-family: "Montserrat", serif;
-  &.lock {
-    overflow: hidden;
-  }
+    font-family: "Montserrat", serif;
+    &.lock {
+        overflow: hidden;
+    }
 }
 .wrapper {
-  overflow-x: hidden;
-  @include flex-column();
-  min-height: 100vh;
+    overflow-x: hidden;
+    @include flex-column();
+    min-height: 100vh;
 }
 main {
-  margin-top: 70px;
-  flex: 1;
-  @include flex-column();
-  justify-content: center;
+    margin-top: 70px;
+    flex: 1;
+    @include flex-column();
+    justify-content: center;
 }
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 20px;
 }
 .card {
-  background: transparent;
-  border: none;
+    background: transparent;
+    border: none;
 }
 h1,
 h2,
 h3,
 h5 {
-  font-weight: 700;
-  color: $body-dark;
+    font-weight: 700;
+    color: $body-dark;
 }
 h5 {
-  font-size: 24px;
-  margin-bottom: 5px;
-  text-align: center;
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 p {
-  color: $text-color;
-  line-height: 140%;
-  font-size: 16px;
+    color: $text-color;
+    line-height: 140%;
+    font-size: 16px;
 }
 label {
-  color: $text-color;
+    color: $text-color;
 }
 ul {
-  padding: 0;
-  list-style: none;
+    padding: 0;
+    list-style: none;
 }
 img {
-  width: 70%;
-  border-radius: 15px;
-  &.dots {
-    position: absolute;
-    width: 10%;
-    right: 0;
-    top: 100%;
-    border-radius: 0px;
-  }
+    width: 70%;
+    border-radius: 15px;
+    &.dots {
+        position: absolute;
+        width: 10%;
+        right: 0;
+        top: 100%;
+        border-radius: 0px;
+    }
 }
 .center-align {
-  text-align: center;
+    text-align: center;
 }
 a {
-  text-decoration: none;
-  font-size: 16px;
-  &.active {
-    border-bottom: 1px solid $white-text;
-  }
+    text-decoration: none;
+    font-size: 16px;
+    &.active {
+        border-bottom: 1px solid $white-text;
+    }
 }
 .content {
-  max-width: 55%;
-  margin: 40px auto;
-  text-align: center;
-  p {
-    margin-bottom: 30px;
-  }
+    max-width: 55%;
+    margin: 40px auto;
+    text-align: center;
+    p {
+        margin-bottom: 30px;
+    }
 }
 [class*="__"][class$="__content"] {
-  margin: 40px auto;
-  text-align: center;
-  max-width: 70%;
+    margin: 40px auto;
+    text-align: center;
+    max-width: 70%;
 }
 button {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  &.active {
-    border-bottom: 1px solid $white-text;
-  }
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    &.active {
+        border-bottom: 1px solid $white-text;
+    }
 }
 .btn {
-  border: none;
-  background-color: transparent;
-  border-radius: 20px;
-  padding: 10px 50px;
-  color: $white-text;
-  transition: all 0.5s ease;
-
-  &--more {
-    background-color: $accent;
-    &:hover {
-      cursor: pointer;
-      background-color: $purple;
-      border-radius: 12px;
-    }
-  }
-  &--play {
-    font-size: 16px;
-    font-weight: 600;
-    color: $body-dark;
-    text-decoration: none;
-    background-color: $yellow;
-    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+    border: none;
+    background-color: transparent;
     border-radius: 20px;
     padding: 10px 50px;
-
-    &:hover {
-      cursor: pointer;
-      background-color: $btn-bg;
-      border-radius: 12px;
-      color: $white-text;
-    }
-  }
-  &--play.unfinished {
-    &:hover {
-      cursor: pointer;
-      background-color: $red;
-      border-radius: 12px;
-    }
-  }
-  &--submit {
-    font-size: 20px;
-    font-weight: 600;
     color: $white-text;
-    background-color: $purple;
-    padding: 16px 20px;
-    border-radius: 10px;
-    &:hover {
-      cursor: pointer;
-      background-color: $accent;
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.12);
+    transition: all 0.5s ease;
+
+    &--more {
+        background-color: $accent;
+        &:hover {
+            cursor: pointer;
+            background-color: $purple;
+            border-radius: 12px;
+        }
     }
-  }
+    &--play {
+        font-size: 16px;
+        font-weight: 600;
+        color: $body-dark;
+        text-decoration: none;
+        background-color: $yellow;
+        box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+        border-radius: 20px;
+        padding: 10px 50px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $btn-bg;
+            border-radius: 12px;
+            color: $white-text;
+        }
+    }
+    &--play.unfinished {
+        &:hover {
+            cursor: pointer;
+            background-color: $red;
+            border-radius: 12px;
+        }
+    }
+    &--submit {
+        font-size: 20px;
+        font-weight: 600;
+        color: $white-text;
+        background-color: $purple;
+        padding: 16px 20px;
+        border-radius: 10px;
+        &:hover {
+            cursor: pointer;
+            background-color: $accent;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1),
+                0 3px 6px rgba(0, 0, 0, 0.12);
+        }
+    }
 }
 .col-img {
-  width: 40%;
-  align-self: center;
+    width: 40%;
+    align-self: center;
 }
 .bg--img {
-  position: absolute;
-  left: 115px;
-  z-index: -1;
-  width: 71%;
+    position: absolute;
+    left: 115px;
+    z-index: -1;
+    width: 71%;
 }
 .introduction {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 130px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 130px auto;
 }
 @media screen and (max-width: 770px) {
 }
 .type {
-  font-size: 16px;
-  color: $text-color;
-  margin-bottom: 3%;
-  span {
-    color: $accent;
-    font-weight: 500;
-  }
+    font-size: 16px;
+    color: $text-color;
+    margin-bottom: 3%;
+    span {
+        color: $accent;
+        font-weight: 500;
+    }
 }
 ::-webkit-scrollbar {
-  width: 7px;
-  background-color: rgb(224, 224, 224);
+    width: 7px;
+    background-color: rgb(224, 224, 224);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(143, 143, 143);
-  border-radius: 50px;
+    background: rgb(143, 143, 143);
+    border-radius: 50px;
 }
 .bg-color {
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 131%;
-    background-color: $introduce-bg;
-    position: absolute;
-    z-index: -1;
-    top: -10%;
-  }
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 131%;
+        background-color: $introduce-bg;
+        position: absolute;
+        z-index: -1;
+        top: -10%;
+    }
 }
 .bg-color-block {
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 92%;
-    background-color: $introduce-bg;
-    position: absolute;
-    z-index: -1;
-    top: 5%;
-    left: 0;
-  }
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 92%;
+        background-color: $introduce-bg;
+        position: absolute;
+        z-index: -1;
+        top: 5%;
+        left: 0;
+    }
 }
 
 @media screen and (max-width: 529px) {
-  .bg--img {
-    width: 130% !important;
-    left: -20px !important;
-  }
-  .type {
-    font-size: 9px;
-    margin-bottom: 10%;
-  }
+    .bg--img {
+        width: 130% !important;
+        left: -20px !important;
+    }
+    .type {
+        font-size: 9px;
+        margin-bottom: 10%;
+    }
 }
 
 @media screen and (min-width: 530px) and (max-width: 770px) {
-  .bg--img {
-    position: absolute;
-    width: 140% !important;
-    left: 10% !important;
-    margin-bottom: 350px;
-    margin-top: 350px;
-  }
-  .type {
-    font-size: 12px;
-    margin-bottom: 5%;
-  }
+    .bg--img {
+        position: absolute;
+        width: 140% !important;
+        left: 10% !important;
+        margin-bottom: 350px;
+        margin-top: 350px;
+    }
+    .type {
+        font-size: 12px;
+        margin-bottom: 5%;
+    }
 }
