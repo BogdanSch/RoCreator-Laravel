@@ -19,24 +19,22 @@
                 @csrf
                 <h3 class="contacts__form-title">Send me <span class="contacts__form-title-span">a message🚀</span></h3>
                 <div class="form-group">
-                    <div class="form-group">
-                        <input type="text" name="fullName" class="contacts__form-input" placeholder="Full name*"
+                    <input type="text" name="fullName" class="contacts__form-input" placeholder="Full name*"
                             autocomplete="given-name family-name" required />
-                        <div class="form-group">
-                            <input type="email" name="email" class="contacts__form-input" placeholder="Email address*"
-                                autocomplete="email" required />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" class="contacts__form-input" placeholder="Subject*" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Tell me what you want to chat about*</label>
-                            <textarea name="message" id="message" rows="15" class="contacts__form-text"
-                                required></textarea>
-                        </div>
-                        <input type="hidden" name="time" id="time" value="0">
-                        <input type="submit" value="Send Message" class="btn btn--submit" />
+                    <div class="form-group">
+                        <input type="email" name="email" class="contacts__form-input" placeholder="Email address*"
+                            autocomplete="email" required />
                     </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" class="contacts__form-input" placeholder="Subject*" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell me what you want to chat about*</label>
+                        <textarea name="message" id="message" rows="15" class="contacts__form-text"
+                            required></textarea>
+                    </div>
+                    <input type="hidden" name="time" id="time" value="0">
+                    <input type="submit" value="Send Message" class="btn btn--submit" />
                 </div>
             </form>
         </div>

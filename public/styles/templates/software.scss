@@ -19,14 +19,15 @@
         list-style: none;
         justify-content: space-around;
         align-items: center;
+        row-gap: 20px;
     }
     &__item {
         display: flex;
         align-items: center;
         width: 48%;
-        height: 340px;
+        min-height: 340px;
         position: relative;
-        margin: 60px auto;
+        margin: 0 auto;
 
         &::before {
             content: "";
@@ -72,7 +73,6 @@
         }
         &__item {
             width: 84%;
-            margin-top: 10px;
 
             .description {
                 min-width: 54%;
@@ -94,7 +94,6 @@
 
         &__item {
             width: 60%;
-            margin-top: 10px;
 
             .description {
                 width: 60%;
