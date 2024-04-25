@@ -5,15 +5,18 @@
         h2 {
             text-align: center;
         }
+
         p {
             text-align: center;
             max-width: 580px;
             margin: 0 auto;
         }
     }
+
     &__hero {
         position: relative;
     }
+
     &__list {
         @include flex-row();
         flex-wrap: wrap;
@@ -21,7 +24,9 @@
         justify-content: space-around;
         align-items: center;
         row-gap: 20px;
+        margin-bottom: 60px;
     }
+
     &__item {
         display: flex;
         align-items: center;
@@ -49,10 +54,12 @@
             width: 49%;
             @include flex-column();
             align-items: center;
+
             .text {
                 margin-bottom: 15px;
             }
         }
+
         &-image {
             width: 40%;
             position: relative;
@@ -69,16 +76,19 @@
                 align-self: center;
             }
         }
+
         &__list {
             @include flex-column();
             justify-content: center;
         }
+
         &__item {
             width: 84%;
 
             .description {
                 min-width: 54%;
             }
+
             &-image {
                 width: 50%;
                 left: -10%;
@@ -86,23 +96,27 @@
         }
     }
 }
+
 @media screen and (min-width: 630px) and (max-width: 770px) {
     .games {
         &__list {
             @include flex-column();
             justify-content: center;
         }
+
         &__item {
             width: 60%;
 
             .description {
                 width: 60%;
             }
+
             &-image {
                 width: 55%;
                 left: -10%;
             }
         }
+
         &__introduction {
             img {
                 width: 40%;

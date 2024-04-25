@@ -2,18 +2,22 @@
   min-width: 100%;
   background-color: $background-dark;
   justify-self: end;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   &__wrap {
     @include flex-row();
     justify-content: space-between;
     align-items: center;
   }
-  & p {
+
+  p {
     color: $white-text;
     text-align: center;
     padding: 0;
     margin: 0;
   }
+
   .social-medias {
     @include flex-row();
     justify-content: center;
@@ -24,8 +28,30 @@
       position: relative;
       text-align: center;
 
+      & i {
+        transition: all 0.6s ease;
+        padding: 16px;
+        color: $white-text;
+        background-color: $social-link-bg;
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+        @include flex-column();
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $introduce-bg;
+
+        &:hover {
+          background-color: $accent;
+        }
+      }
+
       .hint {
-        display: none;
+        transition: all 0.3s ease-in;
+        opacity: 0;
         border: 3px solid $body-dark;
         font-size: 18px;
         font-weight: 700;
@@ -38,31 +64,10 @@
         background-color: $accent;
         border-radius: 10px;
         padding: 15px 40px;
-      }
 
-      &:hover {
-        .hint {
-          display: block;
+        &:hover {
+          opacity: 1;
         }
-      }
-    }
-
-    & i {
-      color: $white-text;
-      padding: 7px;
-      background-color: $social-link-bg;
-      border-radius: 50%;
-      text-align: center;
-      position: relative;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 3px solid $introduce-bg;
-
-      &:hover {
-        background-color: $accent;
       }
     }
   }

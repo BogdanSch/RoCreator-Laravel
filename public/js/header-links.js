@@ -5,7 +5,8 @@ $(document).ready(function () {
     const allHeaderLinks = $("li.header__item a");
 
     allHeaderLinks.each(function () {
-        let element_href = $(this).attr("href").split("./").pop();
+        const link = $(this);
+        let linkHref = link.attr("href").split("/").pop();
 
         if (currentPage.includes("games")) {
             let gamesButton = $("li.sub-games .opener");
@@ -14,7 +15,7 @@ $(document).ready(function () {
             }
             return;
         }
-        if (currentPage === element_href) {
+        if (currentPage === linkHref) {
             $(this).addClass("active");
             return;
         }

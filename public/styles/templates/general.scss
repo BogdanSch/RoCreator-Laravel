@@ -1,37 +1,46 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;700&display=swap";
+
 * {
     box-sizing: border-box;
     transition: all 0.2s ease;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: "Montserrat", serif;
+
     &.lock {
         overflow: hidden;
     }
 }
+
 .wrapper {
     overflow-x: hidden;
     @include flex-column();
     min-height: 100vh;
 }
+
 main {
-    margin-top: 70px;
+    margin-top: 100px;
     flex: 1;
     @include flex-column();
     justify-content: center;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px 20px;
 }
+
 .card {
     background: transparent;
     border: none;
 }
+
 h1,
 h2,
 h3,
@@ -39,26 +48,32 @@ h5 {
     font-weight: 700;
     color: $body-dark;
 }
+
 h5 {
     font-size: 24px;
     margin-bottom: 5px;
     text-align: center;
 }
+
 p {
     color: $text-color;
     line-height: 140%;
     font-size: 16px;
 }
+
 label {
     color: $text-color;
 }
+
 ul {
     padding: 0;
     list-style: none;
 }
+
 img {
     width: 70%;
     border-radius: 15px;
+
     &.dots {
         position: absolute;
         width: 10%;
@@ -67,37 +82,46 @@ img {
         border-radius: 0px;
     }
 }
+
 .center-align {
     text-align: center;
 }
+
 a {
     text-decoration: none;
     font-size: 16px;
+
     &.active {
         border-bottom: 1px solid $white-text;
     }
 }
+
 .content {
     max-width: 55%;
     margin: 40px auto;
     text-align: center;
+
     p {
         margin-bottom: 30px;
     }
 }
+
 [class*="__"][class$="__content"] {
     margin: 40px auto;
     text-align: center;
     max-width: 70%;
 }
+
 button {
     border: none;
     background-color: transparent;
     padding: 0;
+
     &.active {
         border-bottom: 1px solid $white-text;
     }
 }
+
 .btn {
     border: none;
     background-color: transparent;
@@ -109,13 +133,14 @@ button {
     &--more {
         background-color: $accent;
         margin-top: 20px;
-        
+
         &:hover {
             cursor: pointer;
             background-color: $purple;
             border-radius: 12px;
         }
     }
+
     &--play {
         font-size: 16px;
         font-weight: 600;
@@ -133,6 +158,7 @@ button {
             color: $white-text;
         }
     }
+
     &--play.unfinished {
         &:hover {
             cursor: pointer;
@@ -140,6 +166,7 @@ button {
             border-radius: 12px;
         }
     }
+
     &--submit {
         font-size: 20px;
         font-weight: 600;
@@ -147,6 +174,7 @@ button {
         background-color: $purple;
         padding: 16px 20px;
         border-radius: 10px;
+
         &:hover {
             cursor: pointer;
             background-color: $accent;
@@ -155,39 +183,47 @@ button {
         }
     }
 }
+
 .col-img {
     width: 40%;
     align-self: center;
 }
+
 .bg--img {
     position: absolute;
     left: 115px;
     z-index: -1;
     width: 71%;
 }
+
 .introduction {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 130px auto;
 }
+
 .type {
     font-size: 16px;
     color: $text-color;
     margin-bottom: 3%;
+
     span {
         color: $accent;
         font-weight: 500;
     }
 }
+
 ::-webkit-scrollbar {
     width: 7px;
     background-color: rgb(224, 224, 224);
 }
+
 ::-webkit-scrollbar-thumb {
     background: rgb(143, 143, 143);
     border-radius: 50px;
 }
+
 .bg-color {
     &::after {
         content: "";
@@ -200,6 +236,7 @@ button {
         top: -10%;
     }
 }
+
 .bg-color-block {
     &::after {
         content: "";
@@ -223,49 +260,62 @@ button {
         margin-bottom: 350px;
         margin-top: 350px;
     }
+
     .type {
         font-size: 12px;
         margin-bottom: 5%;
     }
+
     p {
         font-size: 12px;
     }
+
     .btn {
+
         &--play,
         &--more {
             padding: 9px 45px;
         }
     }
+
     .introducing {
         .content {
             max-width: 50%;
         }
     }
+
     h1 {
         font-size: 30px;
     }
+
     h5 {
         font-size: 16px;
     }
 }
+
 @media screen and (max-width: 529px) {
     .bg--img {
         width: 130% !important;
         left: -20px !important;
     }
+
     .type {
         font-size: 9px;
         margin-bottom: 10%;
     }
+
     h1 {
         font-size: 20px;
     }
+
     h2 {
         font-size: 18px;
     }
+
     h5 {
         font-size: 14px;
     }
+
     .btn {
         padding: 8px 24px !important;
         font-size: 12px !important;
@@ -282,14 +332,17 @@ button {
     .description {
         max-width: 250px;
     }
+
     p {
         font-size: 9px;
     }
+
     .introducing {
         .content {
             max-width: 50%;
         }
     }
+
     .social-medias {
         i {
             width: 24px;
