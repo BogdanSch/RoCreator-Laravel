@@ -4,7 +4,7 @@
 <section class="about introducing" data-aos="fade-up" data-aos-duration="2000">
     <div class="container">
         <div class="about__wrap">
-            <div class="about__content">
+            <div class="content">
                 <h2>About my games for Android</h2>
                 <img src="{{ asset('img/android-device.jpg') }}" alt="Android Games Intro Picture">
                 <p>

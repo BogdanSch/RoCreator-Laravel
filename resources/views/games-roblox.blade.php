@@ -4,7 +4,7 @@
 <section class="about introducing" data-aos="fade-up" data-aos-duration="2000">
     <div class="container">
         <div class="about__wrap">
-            <div class="about__content">
+            <div class="content">
                 <h2>About my games on Roblox</h2>
                 <img src="{{ asset('img/roblox-intro.jfif') }}" alt="Roblox Games Intro Image">
                 <p>I'm a Roblox developer and I have been creating my fascinating Roblox games for about 2,5 years. On

@@ -102,7 +102,7 @@ a {
 }
 
 .content {
-    max-width: 55%;
+    max-width: 70%;
     margin: 40px auto;
     text-align: center;
 
@@ -111,11 +111,11 @@ a {
     }
 }
 
-[class*="__"][class$="__content"] {
-    margin: 40px auto;
-    text-align: center;
-    max-width: 70%;
-}
+// [class*="__"][class$="__content"] {
+//     margin: 40px auto;
+//     text-align: center;
+//     max-width: 70%;
+// }
 
 button {
     border: none;
@@ -303,6 +303,10 @@ button {
         margin-top: 80px;
     }
 
+    .content{
+        max-width: 80%;
+    }
+
     .bg--img {
         width: 130% !important;
         left: -20px !important;
@@ -328,14 +332,6 @@ button {
     .btn {
         padding: 8px 24px !important;
         font-size: 12px !important;
-        // &--play {
-        //     padding: 4px 22px;
-        //     font-size: 12px;
-        // }
-        // &--more {
-        //     padding: 4px 22px;
-        //     font-size: 12px;
-        // }
     }
 
     .description {

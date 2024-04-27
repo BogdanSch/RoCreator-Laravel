@@ -21,7 +21,7 @@
     <section class="about" id="about" data-aos="zoom-in" data-aos-duration="2000">
         <div class="container">
             <div class="about__wrap">
-                <div class="about__content">
+                <div class="content">
                     <h2 class="about__title">About me</h2>
                     <img src="{{ asset('img/laptop-with-code.avif') }}" class="about__img" alt="Laptop with code image">
                     <p class="about__description">I'm a middle developer. I don't have a team yet but the quality of my

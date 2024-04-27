@@ -67,19 +67,21 @@
         }
     }
 
+    .opener {
+        cursor: pointer;
+    }
+
     .sub-list {
         position: relative;
 
-        &:hover,
         &:focus-within {
             button {
-                cursor: pointer;
                 color: $yellow;
             }
 
             .header__lower__list {
                 opacity: 1;
-                transform: translateY(44%);
+                transform: translateY(42%);
                 pointer-events: all;
             }
         }
@@ -203,8 +205,6 @@
         }
 
         .sub-list {
-
-            &:hover,
             &:focus-within {
                 .header__lower__list {
                     opacity: 1;

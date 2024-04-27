@@ -72,21 +72,15 @@
                     <div class="social-medias">
                         <a href="https://www.roblox.com/users/1412761211/profile" target="_blank" class="social-link">
                             <i class="fa-solid fa-r"></i>
-                            <div class="hint">
-                                Roblox
-                            </div>
+                            <div class="hint">Roblox</div>
                         </a>
                         <a href="https://t.me/+voC6fujFeLE4ZDQy" target="_blank" class="social-link">
                             <i class="fa-brands fa-telegram"></i>
-                            <div class="hint">
-                                Telegram
-                            </div>
+                            <div class="hint">Telegram</div>
                         </a>
                         <a href="https://www.instagram.com/bogsvity_777/" target="_blank" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
-                            <div class="hint">
-                                Instagram
-                            </div>
+                            <div class="hint">Instagram</div>
                         </a>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
     <section class="about introducing" data-aos="fade-up" data-aos-duration="3000">
         <div class="container">
             <div class="about__wrap">
-                <div class="about__content">
+                <div class="content">
                     <h2>About my software</h2>
                     <img src="{{ asset('img/photo-laptops.avif') }}" class="about__img" alt="About My Software Picture">
                     <p class="about__description">I started my career developing software for PC, Web and Android devices.
