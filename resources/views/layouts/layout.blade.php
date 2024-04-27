@@ -22,7 +22,7 @@
                 <div class="header__wrap">
                     <div class="header__logo">
                         <i class="fa-solid fa-cloud"></i>
-                        <a class="logo" href="/">RoCreator</a>
+                        <a class="header__logo-title" href={{ route('home') }}>RoCreator</a>
                     </div>
                     <nav class="header__menu">
                         <div class="header__burger">
@@ -30,27 +30,27 @@
                         </div>
                         <ul class="header__list">
                             <li class="header__item">
-                                <a href="/">Home</a>
+                                <a href={{ route('home') }}>Home</a>
                             </li>
-                            <li class="header__item sub-games">
+                            <li class="header__item sub-list">
                                 <button class="opener">Games</button>
                                 <ul class="header__lower__list">
                                     <li class="header__lower__item">
-                                        <a href="/games-roblox">Roblox</a>
+                                        <a href={{ route('gamesRoblox') }}>Roblox</a>
                                     </li>
                                     <li class="header__lower__item">
-                                        <a href="/games-android">Android</a>
+                                        <a href={{ route('gamesAndroid') }}>Android</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="header__item">
-                                <a href="/software">Software</a>
+                                <a href={{ route('software') }}>Software</a>
                             </li>
                             <li class="header__item">
-                                <a href="/privacy">Privacy</a>
+                                <a href={{ route('privacy') }}>Privacy</a>
                             </li>
                             <li class="header__item accent">
-                                <a href="/contacts">Contacts</a>
+                                <a href={{ route('contacts') }}>Contacts</a>
                             </li>
                         </ul>
                         <div class="page__action">

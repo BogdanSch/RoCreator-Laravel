@@ -13,7 +13,6 @@
                     Feel free to use the contact form to reachout to us.
                 </p>
             </div>
-            <?php //{{ route('sendMail') }} ?>
             <form action="https://sheetdb.io/api/v1/97uitw1pohok4" method="post" accept-charset="UTF-8" class="contacts__form" data-aos="fade-up"
                 data-aos-duration="2000">
                 @csrf

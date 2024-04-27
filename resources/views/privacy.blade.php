@@ -15,7 +15,7 @@
                     And enjoy your experience on this web-site and enjoy using the software that you may need.
                 </p>
                 <div class="center-align">
-                    <a class="btn btn--more" href="./">Go Home</a>
+                    <a class="btn btn--more" href={{route("home")}}>Go Home</a>
                 </div>
             </div>
             <img src="{{ asset('img/privacy-v2.png') }}" class="intro-img" alt="Privacy Intro image">

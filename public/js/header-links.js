@@ -9,7 +9,7 @@ $(document).ready(function () {
         let linkHref = link.attr("href").split("/").pop();
 
         if (currentPage.includes("games")) {
-            let gamesButton = $("li.sub-games .opener");
+            let gamesButton = $("li.sub-list .opener");
             if (gamesButton.length) {
                 gamesButton.addClass("active");
             }

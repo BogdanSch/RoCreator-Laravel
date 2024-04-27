@@ -4,23 +4,26 @@
     position: fixed;
     z-index: 2;
     top: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
 
-    .page__theme:hover {
+    .page__theme {
         cursor: pointer;
+
+        i {
+            font-size: 28px;
+        }
     }
 
-    .logo {
-        font-size: 20px;
-        font-weight: 600;
+    &__logo {
+        &-title {
+            font-size: 24px !important;
+            font-weight: 700 !important;
+        }
     }
 
     &__wrap {
         @include flex-row();
         justify-content: space-between;
         align-items: center;
-        // max-height: 30px;    
 
         * {
             color: $white-text;
@@ -64,10 +67,27 @@
         }
     }
 
+    .sub-list {
+        position: relative;
+
+        &:hover,
+        &:focus-within {
+            button {
+                cursor: pointer;
+                color: $yellow;
+            }
+
+            .header__lower__list {
+                opacity: 1;
+                transform: translateY(44%);
+                pointer-events: all;
+            }
+        }
+    }
+
     &__lower__list {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        transition: all 0.5s ease;
         position: absolute;
+        transition: all 0.5s ease;
         z-index: 100;
         top: 0;
         left: -75%;
@@ -76,11 +96,12 @@
         padding: 30px 40px;
         opacity: 0;
         pointer-events: none;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
     &__lower__item {
         color: $white-text;
-        padding: 10px 10px;
+        padding: 10px;
 
         &:hover {
             border-bottom: 1px solid $white-text;
@@ -88,30 +109,10 @@
     }
 }
 
-.sub-games {
-    position: relative;
-    padding: 20px 0;
-
-    &:focus-within {
-        button {
-            cursor: pointer;
-            color: $yellow;
-        }
-
-        .header__lower__list {
-            opacity: 1;
-            transform: translateY(74%);
-            pointer-events: all;
-            // display: block;
-        }
-    }
-}
-
 @media screen and (max-width: 670px) {
     .header {
-        height: 40px;
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: 4px;
+        padding-bottom: 4px;
 
         &__burger {
             display: block;
@@ -145,8 +146,8 @@
             span {
                 position: absolute;
                 background-color: $white-text;
-                left: 0;
-                width: 100%;
+                left: 50%;
+                width: 50%;
                 height: 2px;
                 top: 9px;
                 transition: all 0.5s ease;
@@ -193,17 +194,24 @@
         }
 
         &__item {
-            padding: 10px 10px;
+            padding: 10px;
         }
 
         &__lower__list {
-            z-index: 30;
-            top: 30px;
+            top: 0;
             left: 20%;
-            background-color: $background-dark;
-            border-radius: 10px;
-            padding: 30px 40px;
-            display: none;
+        }
+
+        .sub-list {
+
+            &:hover,
+            &:focus-within {
+                .header__lower__list {
+                    opacity: 1;
+                    transform: translateY(10%);
+                    pointer-events: all;
+                }
+            }
         }
     }
 }

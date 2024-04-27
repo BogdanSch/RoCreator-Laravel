@@ -80,7 +80,7 @@
                     @endforeach
                 </ul>
                 <div class="center-align">
-                    <a class="btn btn--more center-align" href="./games-roblox">Get More</a>
+                    <a class="btn btn--more center-align" href={{ route('gamesRoblox') }}>Get More</a>
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
                     @endforeach
                 </ul>
                 <div class="center-align">
-                    <a class="btn btn--more center-align" href="./software">Get More</a>
+                    <a class="btn btn--more center-align" href={{ route('software') }}>Get More</a>
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;700&display=swap";
 
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     transition: all 0.2s ease;
 }
@@ -48,7 +50,7 @@ h5 {
     color: $body-dark;
 }
 
-h2{
+h2 {
     font-size: 28px;
 }
 
@@ -297,6 +299,10 @@ button {
 }
 
 @media screen and (max-width: 529px) {
+    main {
+        margin-top: 80px;
+    }
+
     .bg--img {
         width: 130% !important;
         left: -20px !important;
