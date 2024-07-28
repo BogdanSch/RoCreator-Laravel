@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('main_content')
     <section class="page-404" data-aos="fade-down" data-aos-duration="1500">
