@@ -9,28 +9,54 @@ use App\Models\SoftwarePost;
 
 class RoCreatorController extends Controller
 {
+    /**
+     * @var int
+     */
+    private const AMOUNT_POSTS_TO_PAGINATE = 4;
+
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        $softwarePosts = SoftwarePost::take(4)->get();
-        $gamePosts = GamePost::take(4)->get();
+        $gamesQuery = GamePost::query();
+        $softwaresQuery = SoftwarePost::query();
+
+        $gamePosts = $gamesQuery->orderBy("created_at", "desc")->paginate(self::AMOUNT_POSTS_TO_PAGINATE)->onEachSide(1);
+        $softwarePosts = $softwaresQuery->orderBy("created_at", "desc")->paginate(self::AMOUNT_POSTS_TO_PAGINATE)->onEachSide(1);
 
         return view("home", ['gamePosts' => $gamePosts, 'softwarePosts' => $softwarePosts]);
     }
+    /**
+     * Display a listing of the games for roblox resource.
+     */
     public function gamesRoblox()
     {
-        $allRobloxGames = GamePost::where('game_type', 'Roblox')->get();
+        $gamesQuery = GamePost::query();
+        $allRobloxGames = $gamesQuery->where('game_type', 'Roblox')->orderBy("created_at", "desc")->paginate(self::AMOUNT_POSTS_TO_PAGINATE)->onEachSide(1);
         return view("games.games-roblox", ['robloxGamePosts' => $allRobloxGames]);
     }
+    /**
+     * Display a listing of the games for android resource.
+     */
     public function gamesAndroid()
     {
-        $allAndroidGames = GamePost::where('game_type', 'Android')->get();
+        $gamesQuery = GamePost::query();
+        $allAndroidGames = $gamesQuery->where('game_type', 'Android')->orderBy("created_at", "desc")->paginate(self::AMOUNT_POSTS_TO_PAGINATE)->onEachSide(1);
         return view("games.games-android", ['androidGamePosts' => $allAndroidGames]);
     }
+    /**
+     * Display a listing of the software resource.
+     */
     public function software()
     {
-        $allSoftwarePosts = SoftwarePost::all();
+        $softwareQuery = SoftwarePost::query();
+        $allSoftwarePosts = $softwareQuery->orderBy("created_at", "desc")->paginate(self::AMOUNT_POSTS_TO_PAGINATE)->onEachSide(1);
         return view("software", ['softwarePosts' => $allSoftwarePosts]);
     }
+    /**
+     * Display the privacy policy page.
+     */
     public function privacy()
     {
         return view("privacy");
