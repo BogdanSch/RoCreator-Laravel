@@ -14,19 +14,17 @@ class RoCreatorController extends Controller
         $softwarePosts = SoftwarePost::take(4)->get();
         $gamePosts = GamePost::take(4)->get();
 
-        // Log::info(json_encode($allSoftwarePosts)); 
-        // Log::info(json_encode($allGamePosts)); 
         return view("home", ['gamePosts' => $gamePosts, 'softwarePosts' => $softwarePosts]);
     }
     public function gamesRoblox()
     {
         $allRobloxGames = GamePost::where('game_type', 'Roblox')->get();
-        return view("games-roblox", ['robloxGamePosts' => $allRobloxGames]);
+        return view("games.games-roblox", ['robloxGamePosts' => $allRobloxGames]);
     }
     public function gamesAndroid()
     {
         $allAndroidGames = GamePost::where('game_type', 'Android')->get();
-        return view("games-android", ['androidGamePosts' => $allAndroidGames]);
+        return view("games.games-android", ['androidGamePosts' => $allAndroidGames]);
     }
     public function software()
     {

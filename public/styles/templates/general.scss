@@ -106,16 +106,14 @@ a {
     margin: 40px auto;
     text-align: center;
 
+    h2 {
+        margin-bottom: 16px;
+    }
+
     p {
         margin-bottom: 30px;
     }
 }
-
-// [class*="__"][class$="__content"] {
-//     margin: 40px auto;
-//     text-align: center;
-//     max-width: 70%;
-// }
 
 button {
     border: none;
@@ -189,11 +187,6 @@ button {
     }
 }
 
-.col-img {
-    width: 40%;
-    align-self: center;
-}
-
 .bg--img {
     position: absolute;
     left: 115px;
@@ -205,7 +198,14 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 130px auto;
+    column-gap: 32px;
+    padding: 130px 0;
+
+    .col-img {
+        width: 40%;
+        align-self: center;
+    }
+
 }
 
 .type {
@@ -303,8 +303,23 @@ button {
         margin-top: 80px;
     }
 
-    .content{
+    .content {
         max-width: 80%;
+    }
+
+    .introducing {
+        .content {
+            max-width: 50%;
+        }
+    }
+
+    .introduction {
+        flex-direction: column;
+        padding: 80px 0;
+
+        img {
+            width: 56% !important;
+        }
     }
 
     .bg--img {
@@ -342,25 +357,10 @@ button {
         font-size: 9px;
     }
 
-    .introducing {
-        .content {
-            max-width: 50%;
-        }
-    }
-
     .social-medias {
         i {
             width: 24px;
             height: 24px;
-        }
-    }
-
-    .introduction {
-        flex-direction: column;
-        margin: 80px auto;
-
-        img {
-            width: 50%;
         }
     }
 }

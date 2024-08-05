@@ -17,9 +17,8 @@ use App\Http\Controllers\RoCreatorController;
 
 Route::get("/", [RoCreatorController::class, "index"])->name("home");
 
-Route::get("/games-roblox", [RoCreatorController::class, "gamesRoblox"])->name("gamesRoblox");
-
-Route::get("/games-android", [RoCreatorController::class, "gamesAndroid"])->name("gamesAndroid");
+Route::get("/games/roblox", [RoCreatorController::class, "gamesRoblox"])->name("gamesRoblox");
+Route::get("/games/android", [RoCreatorController::class, "gamesAndroid"])->name("gamesAndroid");
 
 Route::get("/software", [RoCreatorController::class, "software"])->name("software");
 
