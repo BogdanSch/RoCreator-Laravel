@@ -194,20 +194,6 @@ button {
     width: 71%;
 }
 
-.introduction {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 32px;
-    padding: 130px 0;
-
-    .col-img {
-        width: 40%;
-        align-self: center;
-    }
-
-}
-
 .type {
     font-size: 16px;
     color: $text-color;
@@ -283,12 +269,6 @@ button {
         }
     }
 
-    .introducing {
-        .content {
-            max-width: 50%;
-        }
-    }
-
     h1 {
         font-size: 30px;
     }
@@ -305,21 +285,6 @@ button {
 
     .content {
         max-width: 80%;
-    }
-
-    .introducing {
-        .content {
-            max-width: 50%;
-        }
-    }
-
-    .introduction {
-        flex-direction: column;
-        padding: 80px 0;
-
-        img {
-            width: 56% !important;
-        }
     }
 
     .bg--img {
@@ -355,12 +320,5 @@ button {
 
     p {
         font-size: 9px;
-    }
-
-    .social-medias {
-        i {
-            width: 24px;
-            height: 24px;
-        }
     }
 }

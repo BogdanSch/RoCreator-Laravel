@@ -1,23 +1,36 @@
-$(document).ready(function () {
-    let path = window.location.pathname;
-    let currentPage = path.split("/").pop();
+(function ($) {
+    const path = window.location.pathname;
+    const currentPage = path.split("/").pop() || "home";
+
+    const setActiveClass = (element) => {
+        element.addClass("active");
+    };
+
+    const activateLink = (selector, hrefCondition) => {
+        $(selector).each(function () {
+            const link = $(this);
+            const linkHref = link.attr("href").split("/").pop();
+            if (hrefCondition(linkHref)) {
+                setActiveClass(link);
+                return false;
+            }
+        });
+    };
 
     const allHeaderLinks = $("li.header__item a");
 
-    allHeaderLinks.each(function () {
-        const link = $(this);
-        let linkHref = link.attr("href").split("/").pop();
+    if (path.includes("games")) {
+        const gamesSubList = $(".header__item.sub-list");
+        setActiveClass(gamesSubList.find(".opener"));
+        activateLink(
+            gamesSubList.find(".header__lower__item a"),
+            (linkHref) => currentPage === linkHref
+        );
+    } else {
+        activateLink(allHeaderLinks, (linkHref) => currentPage === linkHref);
+    }
 
-        if (currentPage.includes("games")) {
-            let gamesButton = $("li.sub-list .opener");
-            if (gamesButton.length) {
-                gamesButton.addClass("active");
-            }
-            return;
-        }
-        if (currentPage === linkHref) {
-            $(this).addClass("active");
-            return;
-        }
-    });
-});
+    if (currentPage === "home") {
+        setActiveClass(allHeaderLinks.first());
+    }
+})(jQuery);

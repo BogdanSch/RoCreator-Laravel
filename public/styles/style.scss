@@ -1,14 +1,13 @@
 @mixin flex-row {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 @mixin flex-column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-//Mixin - End
 //Variables  - Start
 $white-text: #f8f8f8;
 $introduce-bg: #f6f6f6;
@@ -25,7 +24,6 @@ $btn-bg: rgb(47, 0, 255);
 $social-link-bg: #bdbdbd;
 $light-blue: #d9e5ff;
 $green: #1aff00;
-//Variables - End
 //Includes
 @import "templates/general.scss";
 @import "templates/header.scss";

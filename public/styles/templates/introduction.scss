@@ -1,14 +1,44 @@
 .introducing {
-  margin-bottom: 69px;
-  position: relative;
+    margin-bottom: 69px;
+    position: relative;
 
-  &__wrap {
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.introduction {
     display: flex;
     flex-direction: row;
-    align-items: center;
-  }
+    justify-content: space-between;
+    column-gap: 32px;
+    padding: 130px 0;
+
+    .col-img {
+        width: 40%;
+        align-self: center;
+    }
 }
 
 .intro-img {
-  width: 60%;
+    width: 60%;
+}
+
+@media screen and (max-width: 529px) {
+    .introducing {
+        .content {
+            max-width: 70%;
+        }
+    }
+
+    .introduction {
+        flex-direction: column;
+        padding: 80px 0;
+
+        img {
+            width: 56% !important;
+        }
+    }
 }
